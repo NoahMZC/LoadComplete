@@ -19,6 +19,8 @@ explore: omni_channel_transactions {
     relationship: many_to_one
   }
 
+
+
   join: omni_channel_transactions__transaction_details {
     view_label: "Omni Channel Transactions: Transaction Details"
     sql: LEFT JOIN UNNEST(${omni_channel_transactions.transaction_details}) as omni_channel_transactions__transaction_details ;;
